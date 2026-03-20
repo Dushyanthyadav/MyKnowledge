@@ -15,7 +15,7 @@ pub trait NoteRepository {
     fn save(&self, note: &Note) -> Result<()>;
     fn get_by_id(&self, id: &str) -> Result<Option<Note>>;
     fn get_by_context(&self, context_id: &str) -> Result<Vec<Note>>;
-    fn search_by_tags(&self, query: &[tag]) -> Result<Vec<Note>>;
+    fn search_by_tags(&self, query: &[Tag]) -> Result<Vec<Note>>;
     fn search_by_content(&self, query: &str) -> Result<Vec<Note>>;
     fn search(&self, query: &str) -> Result<Vec<Note>>; // This search includes content, tags, and context
     fn delete(&self, id: &str) -> Result<()>;

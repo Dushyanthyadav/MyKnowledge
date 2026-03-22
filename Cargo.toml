@@ -3,6 +3,10 @@ name = "myknowledge"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "mk"
+path = "src/main.rs"
+
 [dependencies]
 anyhow = "1.0.101"
 chrono = { version = "0.4.43", features = ["serde"] }
